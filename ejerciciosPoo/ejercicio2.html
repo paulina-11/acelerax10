@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenar arreglos</title>
+  </head>
+  <body>
+    <h1>Ordenar Arreglo de mayor a menor</h1>
+
+    <script>
+      var inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+
+      let filtrados = inicio.filter((numero) => Number.isInteger(numero));
+      console.log(filtrados);
+
+      function ordenandoNumeros(filtrados) {
+        let arreglo2 = [];
+        let numMax = filtrados[0];
+
+        for (let i = 0; i < filtrados.length; i++) {
+          arreglo2.push(filtrados[i]);
+        }
+
+        console.log(numMax);
+
+        let datosOrden = arreglo2.length;
+
+        for (let i = 0; i < datosOrden; i++) {
+          for (let j = 0; j < datosOrden; j++) {
+            if (j + 1 !== datosOrden) {
+              if (arreglo2[j] < arreglo2[j + 1]) {
+                let datos = arreglo2[j + 1];
+                arreglo2[j + 1] = arreglo2[j];
+                arreglo2[j] = datos;
+              }
+            }
+          }
+        }
+        
+
+        return arreglo2;
+      }
+
+      console.log(`numeros ordenados de mayor a menor ${ ordenandoNumeros(filtrados)} `);
+    </script>
+  </body>
+</html>

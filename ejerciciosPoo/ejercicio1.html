@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <h1>La serie Fibonacci es:</h1>
+    <script>
+        var introduce = parseInt(prompt(`Introduce un numero limite para la serie`, 0));
+
+        var primerNumero = 1;
+        var segundoNumero = 0;
+        var suma = 0;
+
+        for( var i = 0 ; i < introduce ; i++){
+            suma = primerNumero + segundoNumero;
+            primerNumero = segundoNumero;
+            segundoNumero = suma;
+            console.log(suma);
+            document.write(`${suma}, `);
+        }
+
+    </script>
+</body>
+</html>
