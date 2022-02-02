@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +9,20 @@
 <body>
     <h1>La serie Fibonacci es:</h1>
     <script>
-        var introduce = parseInt(prompt(`Introduce un numero limite para la serie`, 0));
+        var numeroDeElementos = 5;
 
         var primerNumero = 1;
         var segundoNumero = 0;
         var suma = 0;
 
-        for( var i = 0 ; i < introduce ; i++){
+        for( var i = 0 ; i < numeroDeElementos ; i++){
             suma = primerNumero + segundoNumero;
             primerNumero = segundoNumero;
             segundoNumero = suma;
             console.log(suma);
             document.write(`${suma}, `);
         }
+        
 
     </script>
 </body>
