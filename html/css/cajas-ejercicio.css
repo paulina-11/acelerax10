@@ -1,0 +1,19 @@
+.caja-azul{
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    padding: 25px;
+    border: 5px solid black;
+    background-color: blue;
+    overflow: auto;
+
+}
+
+.caja-roja{
+    margin: 50px;
+    padding: 25px;
+    border: 5px solid black;
+    background-color: red;
+    overflow:visible;
+
+}
