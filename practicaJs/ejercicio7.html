@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Realizar una calculadora , utilizando funciones para encapsular las operaciones de suma, resta, multiplicación y división , se debe recibir por prompt 2 números , después con texto o el símbolo la operación que se debe realizar, y mostrar el resultado en un alert.*/
+
+        var numero1 = parseInt(prompt(`Ingrese el primero número`));
+        var numero2 = parseInt(prompt(`Ingrese el segundo número`));
+        var operador = prompt(`Elige un operador`);
+        
+        function operacion(){
+            if(operador == "+"){
+              var sumatoria = numero1 + numero2;
+            }else if(operador == "-"){
+                var resta = numero1 - numero2;
+            } else if(operador == "*"){
+                var multiplicar = numero1 * numero2;
+            }else if(operador == "/"){
+                var dividir = numero1 / numero2;
+            }
+            console.log(sumatoria);
+            console.log(resta);
+            console.log(multiplicar);
+            console.log(dividir)
+        }
+        operacion();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/* Utilizando un ciclo mostrar la suma y el promedio de los números ingresados hasta que se ingrese un numero negativo y ahi mostrar los resultados , usar función prompt*/
+
+var suma = 0;
+var contador = 0;
+
+ do{
+    var numeros = parseInt(prompt("Introduce numeros hasta que metas uno negativo", 0));
+
+    if(numeros >= 0){
+        suma = suma + numeros;
+        contador++
+    }
+    // comprobar que es numero mayor que 0 y sino se seguira repitiendo el do
+ } while(numeros >= 0);
+
+ console.log("La suma de los números es " + suma);
+ console.log("El promedio de los números es " + (suma/contador));
+ 
+
+
+
+
+    </script>
+</body>
+</html>

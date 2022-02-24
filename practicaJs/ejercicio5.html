@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Generar un script que pida 6 números por medio de prompt, los meta en un array y lo muestre en consola.*/
+
+function numero(){
+    var numeros = [];
+    var contador = '';
+    for( var i = 0; i < 6; i++){
+        var x = prompt("Ingresa un numero",0);
+        numeros[i] = x;
+    }
+    for(var i = 0; i < 6; i++ ){
+        contador = contador + numeros[i] + ' ';
+    }
+    var items = contador.split(' ');
+    console.log(items);
+}
+numero();
+    </script>
+</body>
+</html>

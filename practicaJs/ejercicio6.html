@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Definir un array de números enteros cualesquiera , pedir un valor numérico pro prompt y en caso de que ese número se encuentre en el array definido antes muestra un alert con el mensaje de que el número proporcionado se encuentra en el arreglo.*/
+        
+  var numeros = [1, 2, 3, 4, 5];
+
+    var numero = prompt("Introduce el numero");
+    var existe = false;
+    for(var posicion = 0; posicion < numeros.length; posicion++) {
+      if(numeros[posicion] == numero){
+        existe = true;
+    alert(`Él ${numero} proporcionado se encuentra en el arreglo"`);
+        break;
+      }
+     }
+     if(existe == false) {
+      numeros.push(numero);
+      contador++;
+     }
+   
+   console.log(numeros);
+
+
+    </script>
+</body>
+</html>
