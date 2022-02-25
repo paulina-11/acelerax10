@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+function Persona(nombre, edad, calificación){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.calificación = calificación;
+    this.relacion1= function obtDetalles(){
+      document.write("Nombre: " + this.nombre + "<br>" + 
+                     "Edad: " + this.edad + "<br>" + 
+                     "Calificación: " + this.calificación + "<br>");
+    }; 
+  }
+    var nota = new Persona("mario","30","10");
+      nota.relacion1();
+  
+  
+  function Estudiante(curso, grupo){
+    this.curso = curso;
+    this.grupo = grupo;
+    this.relacion2 = function registro(){
+        document.write("Curso: " + this.curso + "<br>" + 
+                       "Grupo: " + this.grupo + "<br>");
+    };
+  }
+    var nota2 = new Estudiante("mate","poo");
+      nota2.relacion2();
+  
+ 
+  function Profesor(asignatura, nivel){
+    this.asignatura = asignatura;
+    this.nivel = nivel;
+    this.relacion3 = function asignar(){
+        document.write("Asignatura: " + this.asignatura + "<br>" + 
+                       "Nivel: " + this.nivel+ "<br>");
+    };
+  }
+    var ficha3 = new Profesor("programacion","base de datos");
+      ficha3.relacion3();
+
+  var datos=[
+    { nombre: "jazmin", apellido: "cruz", },
+    { nombre: "tania"},
+    { nombre: "fabian"},
+    { nombre: "belen"},
+  ];
+  
+  var container=document.getElementById("contenedor");
+  datos.forEach(function(element,index,array){
+    var divContenedor=document.createElement("div");
+    for(var prop in element){
+      var pContenedor = document.createElement("p");
+      pContnedor.innerHTML=prop + ":" + element[prop];
+      divContenedor.appendChild(pContnedor);
+    }
+    container.appendChild(divContenedor)
+  });
+    </script>
+</body>
+</html>
